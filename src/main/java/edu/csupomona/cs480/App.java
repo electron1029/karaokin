@@ -10,7 +10,7 @@ import edu.csupomona.cs480.data.provider.FSUserManager;
 import edu.csupomona.cs480.data.provider.UserManager;
 
 //TODO: database location
-// ds047591.mongolab.com:47591/jukebox -u <dbuser> -p <dbpassword>
+// ds047591.mongolab.com:47591/jukebox -u chantal -p hackathon
 
 @Configuration
 @EnableAutoConfiguration
