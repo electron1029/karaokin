@@ -8,6 +8,7 @@
 
     <!-- Bootstrap -->
     <link href="css/bootstrap.min.css" rel="stylesheet">
+	<link href="css/bootstrap.css" rel="stylesheet">
 
     <!-- HTML5 shim and Respond.js for IE8 support of HTML5 elements and media queries -->
     <!-- WARNING: Respond.js doesn't work if you view the page via file:// -->
@@ -20,13 +21,19 @@
 	<center>
 		<h1>KARAOKIN</h1>
 		
+		<div class="btn-group" role="group" aria-label="...">
+			<button type="button" class="btn btn-default">Left</button>
+			<button type="button" class="btn btn-default">Middle</button>
+			<button type="button" class="btn btn-default">Right</button>
+		</div><br><br>
+		
 		<div>
-			<form action="search" method="GET">
-				<input id="title" type= "text" size="200">
-				<input id="singer" type= "text" size="100>
-				<input type="submit" value="Search" onClick="httpGet()">
+			<form class="search" action="search" method="GET">
+				<input id="title" type= "text" size="50" placeholder="song title or artist name"><br>
+				<input type="button" value="Search" onClick="httpGet()">
 			</form>
 		</div>
+		
 	</center>
 
     <!-- jQuery (necessary for Bootstrap's JavaScript plugins) -->
@@ -36,7 +43,6 @@
 	
 	<script>
 		var title = document.getElementByID("title").value; 
-		var singer = document.getElementByID("singer").value; 
 		if (title != null) 
 		{
 			xmlHTTP.open(); 
