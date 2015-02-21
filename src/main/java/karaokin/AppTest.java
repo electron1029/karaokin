@@ -1,4 +1,4 @@
-package edu.csupomona.cs480;
+package karaokin;
 
 import junit.framework.Test;
 import junit.framework.TestCase;

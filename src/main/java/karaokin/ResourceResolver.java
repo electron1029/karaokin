@@ -1,4 +1,4 @@
-package edu.csupomona.cs480.util;
+package karaokin;
 
 import java.io.File;
 

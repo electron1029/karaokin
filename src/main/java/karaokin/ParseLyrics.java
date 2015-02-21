@@ -1,4 +1,4 @@
-package edu.csupomona.cs480;
+package karaokin;
 
 import java.io.BufferedReader;
 import java.io.FileNotFoundException;
