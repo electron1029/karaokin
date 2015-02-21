@@ -3,3 +3,4 @@
 .settings
 target
 *.mp3
+*.DS_Store
