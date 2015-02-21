@@ -8,6 +8,7 @@
 		{
 			var recognition = Object;
 		}
+		
 		recognition.continuous = true;
 		recognition.interimResults = false;
 		recognition.lang = 'en';
@@ -15,14 +16,17 @@
 		var confidenceThresh = 0.5;
 
 		// function called when enable is pressed
-		$("#enable-speech").click(function() {
+		$("#myButton1").click(function() {
 			startRecognition();
 		});
 
 		var startRecognition = function() {
-			textArea.focus();
 			recognition.start();
 		};
+		
+		$("#myButton2").click(function() {
+			recognition.stop();
+		});
 
 		// function that checks existence of s in str
 		var userSaid = function(str, s) {
@@ -38,15 +42,8 @@
 				{
 					if (parseFloat(event.results[i][0].confidence) >= parseFloat(confidenceThresh))
 					{
-						text = event.results[i][0].transcript;
-						insertAtCaret(textAreaID, event.results[i][0].transcript);
-
-						// test to see if word recognizer works
-						if (userSaid(text, 'ad'))
-						{
-							console.log('add')
-						}
-
+						text += event.results[i][0].transcript;
+						console.log(text);
 					}
 				}
 			}
