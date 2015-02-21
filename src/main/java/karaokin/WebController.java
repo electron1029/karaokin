@@ -1,8 +1,10 @@
 package karaokin;
 
+import org.springframework.web.bind.annotation.PathVariable;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RequestMethod;
 import org.springframework.web.bind.annotation.RestController;
+import com.google.gson.*;
 
 /**
  * This is the controller used by Spring framework.
@@ -29,5 +31,14 @@ public class WebController {
     	// with the URL: http://localhost:8080/
         return "OK";
     }
+    
+    @RequestMapping(value = "/data/{song_num}/", method = RequestMethod.GET)
+    String getSongData(
+    		@PathVariable("song_num") int song_num){
+    	JsonObject song_ID = new JsonObject();
+    	song_ID.addProperty("songID", song_num);
+    	Gson gson = new GsonBuilder().setPrettyPrinting().serializeNulls().setFieldNamingPolicy(FieldNamingPolicy.UPPER_CAMEL_CASE).create();
+    	return gson.toJson(song_ID);
+    }		
 
 }
