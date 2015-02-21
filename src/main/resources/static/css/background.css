@@ -2,7 +2,7 @@
 /* CSS Document */
 
 img {
-    background-image: url(img/purple_lines.jpg);
+    background-image: url('../img/purple_lines.jpg');
     background-repeat: no-repeat;
     background-position: center;
     background-size: cover;
