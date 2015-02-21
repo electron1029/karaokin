@@ -8,7 +8,7 @@
 		{
 			var recognition = Object;
 		}
-		
+
 		recognition.continuous = true;
 		recognition.interimResults = false;
 		recognition.lang = 'en';
@@ -23,7 +23,7 @@
 		var startRecognition = function() {
 			recognition.start();
 		};
-		
+
 		$("#myButton2").click(function() {
 			recognition.stop();
 		});
@@ -48,5 +48,5 @@
 				}
 			}
 		};
-			});
-		})(jQuery);
+	});
+})(jQuery);
