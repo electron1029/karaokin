@@ -7,24 +7,33 @@ import java.io.IOException;
 
 public class ParseLyrics 
 {
-	public void readFile()
+	public String readFile()
 	{
-		try(BufferedReader br = new BufferedReader(new FileReader("./resources/static/lyrics/DreamALittleDreamOfMe.txt"))) {
+		String everything = "";
+
+		try(BufferedReader br = new BufferedReader(
+				new FileReader("./resources/static/lyrics/DreamALittleDreamOfMe.txt"))) 
+				{
 			StringBuilder sb = new StringBuilder();
 			String line = br.readLine();
 
-			while (line != null) {
+			while (line != null) 
+			{
 				sb.append(line);
 				sb.append(System.lineSeparator());
 				line = br.readLine();
 			}
-			String everything = sb.toString();
-		} catch (FileNotFoundException e) {
-			// TODO Auto-generated catch block
-			e.printStackTrace();
-		} catch (IOException e) {
-			// TODO Auto-generated catch block
-			e.printStackTrace();
-		}
+			everything = sb.toString();
+				} catch (FileNotFoundException e) 
+				{
+					// TODO Auto-generated catch block
+					e.printStackTrace();
+				} catch (IOException e) 
+				{
+					// TODO Auto-generated catch block
+					e.printStackTrace();
+				}
+
+		return everything;
 	}
 }
