@@ -88,3 +88,6 @@
             word-break: break-word;
             height: 100%;
         }
+body {
+  background: #eee;
+}
