@@ -34,14 +34,5 @@ public class App {
         SpringApplication.run(App.class, args);
     }
     
-    @SuppressWarnings("deprecation")
-	@Bean
-    public static DB getDb() throws UnknownHostException, MongoException {
-        String uri="mongodb://chantal:hackathon@ds047591.mongolab.com:47591/jukebox";
-        MongoClientURI mongoClientURI=new MongoClientURI(uri);
-        MongoClient mongoClient=new MongoClient(mongoClientURI);
-        DB db=mongoClient.getDB(mongoClientURI.getDatabase());
-        db.authenticate(mongoClientURI.getUsername(),mongoClientURI.getPassword());
-        return db;
-    }
+    
 }
