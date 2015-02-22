@@ -37,6 +37,7 @@ public class WebController {
     		@PathVariable("song_num") int song_num){
     	JsonObject song_ID = new JsonObject();
     	song_ID.addProperty("songID", song_num);
+    	songDB.songid.find({id: 1});
     	Gson gson = new GsonBuilder().setPrettyPrinting().serializeNulls().setFieldNamingPolicy(FieldNamingPolicy.UPPER_CAMEL_CASE).create();
     	return gson.toJson(song_ID);
     }		
